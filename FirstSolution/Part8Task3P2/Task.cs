@@ -12,15 +12,16 @@ namespace Part8Task3P2
     {
         static void Main(string[] args)
         {
-            int number = 1000;
+            int n = 1000;
             int i = 0;
 
-            for (int j = 0; number >= 50; j++)
+            for (int j = 0; n >= 50; j++)
             {
-                number /= 2;
+                n /= 2;
                 i++;
             }
-
+            
+            Console.WriteLine("Результат равен - " + n);
             Console.WriteLine("Количество итераций равна - " + i);
         }
     }

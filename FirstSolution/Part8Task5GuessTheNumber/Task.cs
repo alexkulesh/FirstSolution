@@ -18,28 +18,30 @@ namespace Part8Task5GuessTheNumber
         {
             Random rnd = new Random();
             int number = rnd.Next(0, 100);
-            Console.WriteLine(number);
+            Console.WriteLine("Введите количество попыток");
+            int attempts = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i <= 3; i++)
-            {
+            for (int i = 1; i <= attempts; i++)
+            {   
+                Console.WriteLine("Вводите число");
                 int input = Convert.ToInt32(Console.ReadLine());
-    
+                
+                if (input < 0 || input > 100)
+                {
+                    throw new ArgumentOutOfRangeException("Не корректно введены данные");
+                }
                 if (input == number)
                 {
                     Console.WriteLine("Правильно");
                     break;
                 }
-                else if (input < number)
+                if (input < number)
                 {
                     Console.WriteLine("Меньше");
                 }
                 else if (input > number)
                 {
                     Console.WriteLine("Больше");
-                }
-                else
-                {
-                    Console.WriteLine("Некорректно введены данные");
                 }
             }
         }

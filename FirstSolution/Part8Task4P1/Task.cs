@@ -11,13 +11,12 @@ namespace Part8Task4P1
         static void Main(string[] args)
         {
             var n = Convert.ToInt32(Console.ReadLine());
-            int i = 0;
-            string num = n.ToString();
+            int i = 1;
             string t = "";
             
-            while (i <= num.Length - 1)
+            while (i <= n)
             {
-                t += num[i];
+                t += i;
                 Console.WriteLine(t);
                 i++;
             }

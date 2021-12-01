@@ -11,12 +11,11 @@ namespace Part8Task4P2
         static void Main(string[] args)
         {
             var n = Convert.ToInt32(Console.ReadLine());
-            string num = n.ToString();
             string t = "";
             
-            for (int i = 0; i <= num.Length - 1; i++)
+            for (int i = 1; i <= n; i++)
             {
-                t += num[i];
+                t += i;
                 Console.WriteLine(t);
             }
         }

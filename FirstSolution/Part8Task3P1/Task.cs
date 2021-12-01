@@ -21,6 +21,7 @@ namespace Part8Task3P1
                 i++;
             }
             
+            Console.WriteLine("Результат равен - " + n);
             Console.WriteLine("Количество итераций равна - " + i);
         }
     }
