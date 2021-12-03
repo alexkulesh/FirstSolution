@@ -10,9 +10,8 @@ namespace Part9Task3
     {
         private static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            string text = input.Trim();
-            string[] words = text.Split(' ');
+            string text = Console.ReadLine();
+            string[]? words = text?.Trim().Split(' ');
             Console.WriteLine("The number of words in the text - " + words.Length);
         }
     }

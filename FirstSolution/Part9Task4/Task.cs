@@ -39,6 +39,7 @@ namespace Part9Task4
                     evenArray[evenElement] = array[i];
                     evenElement++;
                 }
+                
                 if (array[i] % 2 != 0)
                 {
                     oddArray[oddElement] = array[i];

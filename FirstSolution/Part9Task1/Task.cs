@@ -10,12 +10,13 @@ namespace Part9Task1
         private static void Main(string[] args)
         {
             string text = Console.ReadLine();
-            Console.WriteLine("Enter the character");
-            char symbol = Convert.ToChar(Console.ReadLine());
-            double num = 0;
             
-            if (text != null)
-            {
+            if (text != null && text.Length > 0)
+            {   
+                Console.WriteLine("Enter the character");
+                char symbol = Convert.ToChar(Console.ReadLine());
+                double num = 0;
+
                 for (int i = 0; i < text.Length; i++)
                 {
                     if (text[i] == symbol)
@@ -23,10 +24,14 @@ namespace Part9Task1
                         num++;
                     }
                 }
+                
+                double percent = (num / text.Length) * 100;
+                Console.WriteLine(percent);
             }
-
-            double percent = (num / text.Length) * 100;
-            Console.WriteLine(percent);
+            else
+            {
+                throw new NullReferenceException("Empty text");
+            }
         }
     }
 }

@@ -21,12 +21,14 @@ namespace Part9Task7
             {   
                 string newWord = "";
                 string word = array[i];
+                
                 for (int j = 0; j < word.Length; j++)
                 {
                     if (j < array[i].Length - 1 && word[j] == word[j+1])
                     {   
                         j++;
                     }
+                    
                     var letter = word[j];
                     newWord += letter;
                 }
