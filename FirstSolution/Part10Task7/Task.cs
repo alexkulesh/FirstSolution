@@ -11,12 +11,12 @@ namespace Part10Task7
     {
        private static void Main(string[] args)
        {
-           Text( 40, "Alex", "Howard", "John");
+           PrintTextUsingSeveralNames( 40, new string[]{"Alex", "Howard", "John"});
        }
 
-       private static void Text(int age, params string[] name)
+       private static void PrintTextUsingSeveralNames(int age, string[]? name)
        {
-           if (name.Length >= 3)
+           if (name != null && name.Length >= 3)
            {
                Console.WriteLine("We are " + name[0] + ", " + name[1] + " and " + name[2] + ". And we are " + age +
                                  " years old");

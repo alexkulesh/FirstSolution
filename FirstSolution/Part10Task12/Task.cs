@@ -14,35 +14,36 @@ namespace Part10Task12
        private static void Main(string[] args)
        {
            DateTime dateTime = DateTime.Now;
-           Console.WriteLine(Method10(dateTime));
+           Console.WriteLine(DefineTimeOfDay(dateTime));
        }
 
-       static string Method10(DateTime dateTime)
+       static string DefineTimeOfDay(DateTime dateTime)
        {
-           if (dateTime.Hour >= 22 && dateTime.Hour <= 5)
+
+           if (dateTime.Hour <= 24)
            {
-               return "good night";
-           }
+               if (dateTime.Hour >= 22 && dateTime.Hour <= 5)
+               {
+                   return "good night";
+               }
            
-           if (dateTime.Hour >= 5 && dateTime.Hour < 12)
-           {
-               return "good morning";
-           }
+               if (dateTime.Hour >= 5 && dateTime.Hour < 12)
+               {
+                   return "good morning";
+               }
            
-           if (dateTime.Hour >= 12 && dateTime.Hour < 18)
-           {
-               return "good afternoon";
-           }
+               if (dateTime.Hour >= 12 && dateTime.Hour < 18)
+               {
+                   return "good afternoon";
+               }
            
-           if (dateTime.Hour >= 18 && dateTime.Hour < 22)
-           {
-               return "good evening";
+               if (dateTime.Hour >= 18 && dateTime.Hour < 22)
+               {
+                   return "good evening";
+               }
            }
-           
-           else
-           {
-               return "You put wrong data";
-           }
+            
+           return "You put wrong data";
        }
     }
 }

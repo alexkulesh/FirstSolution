@@ -19,10 +19,10 @@ namespace Part10Task10
     {
        private static void Main(string[] args)
        {
-           Method9("Vasya - 0", "Kolya - 6", "Alex - 2", "John - 11");
+           GuessWinner("Vasya - 0", "Kolya - 6", "Alex - 2", "John - 11");
        }
         
-       private static int Method7(string name,int stake)
+       private static int GuessNumber(string name, int stake)
        {    
            int attempt = 0;
            bool result = false;
@@ -31,7 +31,7 @@ namespace Part10Task10
            {
                for (attempt = 1; result == false; attempt++)
                {
-                   result = Method8(stake);
+                   result = CreateRandomNumber(stake);
                    if (result == true)
                    {
                        break;
@@ -41,14 +41,11 @@ namespace Part10Task10
                Console.WriteLine(name + " guessed the result on try №" + attempt);
                return attempt;
            }
-           else
-           {
-               Console.WriteLine(name + " put the wrong number on stake");
-               return 0;
-           }
+           
+           return 0;
        }
 
-       private static bool Method8(int num)
+       private static bool CreateRandomNumber(int num)
        {
            bool result = false;
            Random random = new();
@@ -58,36 +55,29 @@ namespace Part10Task10
            {
                result = true;
            }
-           else if (num > randomNum)
-           {
-               result = false;
-           }
-           else if (num < randomNum)
-           { 
-               result = false;
-           }
-            
+           
            return result;
        }
 
-       private static void Method9(params string[] names)
+       private static void GuessWinner(params string[] names)
        {
            int[] arrayOfAttemptsNum = new int[names.Length];
            string name = names[0];
 
            for (int i = 0; i < names.Length; i++)
            {
-               string[] nameAndStake = names[i].Trim().Split(" - ");
+               string[] nameAndStake = names[i].Split(" - ");
+               nameAndStake[0] = nameAndStake[0].Trim();
                name = nameAndStake[0];
-               int stake = Convert.ToInt32(nameAndStake[1]);
+               int stake = Convert.ToInt32(nameAndStake[1].Trim());
                
                if (stake >= 1 & stake <= 10)
                {
-                   arrayOfAttemptsNum[i] = Method7(name, stake);
+                   arrayOfAttemptsNum[i] = GuessNumber(name, stake);
                }
                else
-               {
-                   Method7(name, stake);
+               {   
+                   Console.WriteLine("Someone put wrong number on the stake");
                }
            }
            
@@ -111,8 +101,9 @@ namespace Part10Task10
            }
 
            for (int i = 0; i < names.Length; i++)
-           {    
-               string[] nameAndStake = names[i].Trim().Split(" - ");
+           {
+               string[] nameAndStake = names[i].Split(" - ");
+               nameAndStake[0] = nameAndStake[0].Trim();
                
                if (indexOfName == i)
                {
@@ -120,7 +111,7 @@ namespace Part10Task10
                }
            }
            
-           Console.WriteLine(name + " wins with best result " + minAttempts);
+           Console.WriteLine("{0} wins with best result {1}", name, minAttempts);
        }
     }
 }

@@ -10,10 +10,10 @@ namespace Part10Task4
     {
         private static void Main(string[] args)
         {
-            Text("Ivan", 22);
+            PrintTextUsingNameAndAge("Ivan", 22);
         }
         
-        private static void Text (string name, int age)
+        private static void PrintTextUsingNameAndAge (string name, int age)
         {
             Console.WriteLine("My name is " + name + " and I'm " + age + " years old");
         }  

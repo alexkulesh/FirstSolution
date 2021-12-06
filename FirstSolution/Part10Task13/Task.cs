@@ -14,14 +14,14 @@ namespace Part10Task13
     {
         private static void Main(string[] args)
         {
-            Method10(new []{"ggg","ttt","jjj"}, new []{111, 222, 333});
+            CompareNumberOfStrings(new []{"ggg","ttt","jjj"}, new []{111, 222, 333});
         }
 
-        private static void Method10(string[] strings,  int[] numbers)
+        private static void CompareNumberOfStrings(string[] strings,  int[] numbers)
         {
             if (strings == null) throw new ArgumentNullException(nameof(strings));
             
-            if (strings.Length > numbers.Length || strings.Length < numbers.Length)
+            if (strings.Length != numbers.Length)
             {
                 Console.WriteLine("number of string and int values is not equal");
             }

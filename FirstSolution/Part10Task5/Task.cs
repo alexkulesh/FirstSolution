@@ -10,20 +10,20 @@ namespace Part10Task5
     {
         private static void Main(string[] args)
         {
-            Text("Ilya", 22);
+            PrintTextDependingOnAge("Ilya", 22);
         }
 
-        private static void Text(string name, int age)
+        private static void PrintTextDependingOnAge(string name, int age)
         {
             if (age > 0)
             {
                 if (age == 1)
                 {
-                    Console.WriteLine("My name is " + name + " and I'm " + age + " year old");
+                    Console.WriteLine("My name is {0} and I'm {1} year old", name, age);
                 }
                 else
                 {
-                    Console.WriteLine("My name is " + name + " and I'm " + age + " years old");
+                    Console.WriteLine("My name is {0} and I'm {1} years old", name, age);
                 }
             }
             else

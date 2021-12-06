@@ -10,16 +10,16 @@ namespace Part10Task2
     {
         private static void Main(string[] args)
         {
-            printText1();
-            printText2();
+            PrintTextUsingNameVasya();
+            PrintTextUsingNameKolya();
         }
 
-        static void printText1()
+        static void PrintTextUsingNameVasya()
         {
             Console.WriteLine("My name is Vasya");
         }
         
-        static void printText2()
+        static void PrintTextUsingNameKolya()
         {
             Console.WriteLine("My name is Kolya");
         }

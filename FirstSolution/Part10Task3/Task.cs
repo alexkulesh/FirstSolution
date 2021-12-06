@@ -11,11 +11,11 @@ namespace Part10Task3
     {
         private static void Main(string[] args)
         {
-            Text("Vasya");
-            Text("Kolya");
+            PrintTextUsingGivenName("Vasya");
+            PrintTextUsingGivenName("Kolya");
         }
 
-        private static void Text (string name)
+        private static void PrintTextUsingGivenName (string name)
         {
             Console.WriteLine("My name is " + name);
         }  

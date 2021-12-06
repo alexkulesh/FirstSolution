@@ -10,11 +10,16 @@ namespace Part10Task8
     public class Task
     {
         private static void Main(string[] args)
-        {
-            Text(new string[]{"f","fddf", "alex", "kolya", "john"}, new string[]{"111", "222","333"});
+        {   
+            string [] newArray = CreateNewArray(new string[]{"f","fddf", "alex", "kolya", "john"}, new string[]{"111", "222","333"});
+            
+            foreach (var i in newArray)
+            {
+                Console.Write(i + " ");
+            }
         }
         
-        private static void Text(string[] array1, string[] array2)
+        private static string[] CreateNewArray(string[] array1, string[] array2)
         {
             string[] newArray = new string[array1.Length + array2.Length];
 
@@ -27,11 +32,8 @@ namespace Part10Task8
             {
                 newArray[i + array1.Length] = array2[i];
             }
-
-            foreach (var VARIABLE in newArray)
-            {
-                Console.Write(VARIABLE + " ");
-            }
+            
+            return newArray;
         }
     }
 }
