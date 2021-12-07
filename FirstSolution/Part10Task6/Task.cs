@@ -10,29 +10,30 @@ namespace Part10Task6
     {
         private static void Main(string[] args)
         {
-            PrintTextDependingOnAge("Ilya", 0);
+            PrintTextDependingOnAge("Ilya", 13);
         }
 
-        private static string PrintTextDependingOnAge(string name, int age)
+        private static void PrintTextDependingOnAge(string name, int age)
         {
-            if (age > 0)
+            if (age == 0)
             {
+                return;
+            }
+
+            if (age > 0)
+            { 
                 if (age == 1)
                 {
-                    return String.Format("My name is {0} and I'm {1} year old", name, age);
+                    Console.WriteLine($"My name is {name} and I'm {age} year old");
                 }
                 else
                 {
-                    return String.Format("My name is {0} and I'm {1} years old", name, age);
+                    Console.WriteLine($"My name is {name} and I'm {age} years old");
                 }
-            } 
-            else if (age == 0)
-            {
-                return "";
             }
             else
-            {
-                return "Incorrect input data";
+            {   
+                Console.WriteLine("Incorrect input data");
             }
         }  
     }   
