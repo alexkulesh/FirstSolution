@@ -33,6 +33,7 @@ namespace Part13Task
             lightBlueSquare.PrintInformation();
             Square redSquare = new Square(3, "Red");
             greenSquare.Length = redSquare.Length * 3;
+            greenSquare.RecalcuteArea();
             greenSquare.PrintInformation();
             blueSquare.PrintInformation();
             lightBlueSquare.PrintInformation();
@@ -54,7 +55,6 @@ namespace Part13Task
         
         public void PrintInformation()
         {
-            RecalcuteArea();
             Console.WriteLine("{0} square side length is {1} and area equals {2}", color, length, area);
         }
 
