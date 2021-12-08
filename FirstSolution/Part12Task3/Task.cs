@@ -22,7 +22,7 @@ namespace Part12Task3
             
             if (word.Length > 2 & word[0] == word[word.Length - 1])
             {
-                word = word.Trim(word[0], word[word.Length - 1]);
+                word = word.Substring(1, word.Length - 2);
                 return IsWordAPalindrome(word);
             }
             
