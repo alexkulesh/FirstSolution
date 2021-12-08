@@ -55,7 +55,7 @@ namespace Part13Task
         
         public void PrintInformation()
         {
-            Console.WriteLine("{0} square side length is {1} and area equals {2}", color, length, area);
+            Console.WriteLine($"{color} square side length is {length} and area equals {area}");
         }
 
         public void RecalcuteArea()
