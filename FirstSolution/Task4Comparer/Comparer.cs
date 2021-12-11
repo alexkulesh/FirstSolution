@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Task4Germany;
 using Task4Russia;
 using Task4UnitedKindom;
@@ -14,6 +15,17 @@ namespace Task4Comparer
     {
         private static void Main(string[] args)
         {
+            string @namespace = "Task4Germany";
+            string @class = "Berlin";
+            string method = "ThousandOfInhabitants";
+            
+            var myClassType = Type.GetType(string.Format("{0}.{1}", @namespace, @class));
+            object instance = myClassType == null ? null : Activator.CreateInstance(myClassType);
+            var myMethodExists = myClassType.GetMethod(method) != null;
+            
+          
+            Console.WriteLine(myClassType);
+            Console.WriteLine(myMethodExists);
             CompareNumberOfInhabitants();
         }
 

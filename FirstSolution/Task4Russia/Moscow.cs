@@ -1,10 +1,10 @@
 ﻿namespace Task4Russia
 {
-    public class Moscow
+    public static class Moscow
     {
-        private static double thousandOfInhabitants = 11920.2;
+        private static int thousandOfInhabitants = 11920;
         
-        public static double ThousandOfInhabitants => thousandOfInhabitants;
+        public static int ThousandOfInhabitants => thousandOfInhabitants;
         
         public static void Main(string[] args)
         {

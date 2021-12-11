@@ -20,6 +20,7 @@ namespace Part14Task1
         private static void Main(string[] args)
         {
             Car ford = new Car("Ford", "Blue", 110, 4.12, 1.76);
+            Car car = new Car();
             ford.PrintInformation();
             ford.RepaintCarInRed();
             ford.AddHorsepower();
@@ -37,17 +38,19 @@ namespace Part14Task1
 
     public class Car
     {
-        private static int numberOfWheels = 4;
-        private static int numberOfEngines = 1;
-
+        private static int numberOfWheels;
+        private static int numberOfEngines;
+        
         private string brand;
         private string color;
         private int horsepower;
         private double length;
         private double width;
-
+        
         static Car()
-        {
+        {   
+            numberOfWheels = 4; 
+            numberOfEngines = 1;
             Console.WriteLine($"Every average car has {numberOfEngines} engine and {numberOfWheels} wheels");
         }
 
@@ -71,6 +74,10 @@ namespace Part14Task1
             this.horsepower = horsepower;
             this.length = length;
             this.width = width;
+        }
+
+        public Car()
+        {
         }
 
         public void PrintInformation()

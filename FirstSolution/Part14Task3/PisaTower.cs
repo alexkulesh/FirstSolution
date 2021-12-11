@@ -2,7 +2,7 @@
 
 namespace Part14Task3
 {
-    public class PisaTower
+    public static class PisaTower
     {
         private static double height = 105.2;
         private static string country = "Italy";

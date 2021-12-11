@@ -1,10 +1,10 @@
 ﻿namespace Task4Germany
 {
-    public class Berlin
+    public static class Berlin
     {
-        private static double thousandOfInhabitants = 3645.5;
+        private static int thousandOfInhabitants = 3645;
         
-        public static double ThousandOfInhabitants => thousandOfInhabitants;
+        public static int ThousandOfInhabitants => thousandOfInhabitants;
 
         public static void Main(string[] args)
         {

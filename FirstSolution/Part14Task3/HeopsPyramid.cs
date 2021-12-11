@@ -2,7 +2,7 @@
 
 namespace Part14Task3
 {
-    public class HeopsPyramid
+    public static class HeopsPyramid
     {
         private static double height = 120.2;
         private static string country = "Egypt";

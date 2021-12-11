@@ -2,7 +2,7 @@
 
 namespace Part14Task3
 {
-    public class Colosseum
+    public static class Colosseum
     {
         private const double height = 50.8;
         private const string country = "Italy";

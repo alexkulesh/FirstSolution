@@ -2,7 +2,7 @@
 
 namespace Part14Task3
 {
-    public class EifelTower
+    public static class EifelTower
     {
          private const double height = 301.2;
          private const string country = "France";

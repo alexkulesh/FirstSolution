@@ -22,9 +22,9 @@ namespace Part14Task2
             student1.PrintStudentInfo();
             student2.PrintStudentInfo();
             student3.PrintStudentInfo();
-            Console.WriteLine(student1.CountAverageGrade(student1.ProgrammingGrades));
-            Console.WriteLine(student1.CountAverageGrade(student1.AdministrationGrades));
-            Console.WriteLine(student1.CountAverageGrade(student1.DesingGrades));
+            Console.WriteLine("Average grade on programming " + student1.CountAverageGrade(student1.ProgrammingGrades));
+            Console.WriteLine("Average grade on administration " + student1.CountAverageGrade(student1.AdministrationGrades));
+            Console.WriteLine("Average grade on design " + student1.CountAverageGrade(student1.DesingGrades));
         }
     }
 
@@ -36,10 +36,10 @@ namespace Part14Task2
         private int group;
         private int[] programmingGrades;
         private int[] administrationGrades;
-        private int[] desingGrades;
+        private int[] designGrades;
 
         public Student(string secondname, string firstname, string middlename, int group, int[] programmingGrades,
-            int[] administrationGrades, int[] desingGrades)
+            int[] administrationGrades, int[] designGrades)
         {
             this.secondname = secondname;
             this.firstname = firstname;
@@ -47,7 +47,7 @@ namespace Part14Task2
             this.group = group;
             this.programmingGrades = programmingGrades;
             this.administrationGrades = administrationGrades;
-            this.desingGrades = desingGrades;
+            this.designGrades = designGrades;
         }
 
         public void PrintStudentInfo()
@@ -75,46 +75,55 @@ namespace Part14Task2
 
             Console.WriteLine("\nDesign grades");
             
-            for (int i = 0; i < desingGrades.Length; i++)
+            for (int i = 0; i < designGrades.Length; i++)
             {
-                Console.Write(desingGrades[i] + " ");
+                Console.Write(designGrades[i] + " ");
             }
             Console.WriteLine();
         }
 
-        public float CountAverageGrade(int[] programmingGrades)
+        public float CountAverageGrade(int[] grades)
         {
             float sum = 0;
             
-            for (int i = 0; i < programmingGrades.Length; i++)
+            for (int i = 0; i < grades.Length; i++)
             {
-                sum += programmingGrades[i];
+                sum += grades[i];
             }
 
-            float averageScore = sum / programmingGrades.Length;
-            Console.WriteLine("Average programming grade");
+            float averageScore = sum / grades.Length;
             return averageScore;
         }
         
-        public int GetProgrammingGrade()
+        public int GetProgrammingGrade(int index)
         {
-            return programmingGrades[2];
+            return programmingGrades[index];
         }
         
-        public void SetProgrammingGrade(int grade)
+        public void SetProgrammingGrade(int index, int grade)
         {
-            programmingGrades[2] = grade;
+            programmingGrades[index] = grade;
         }
         
         
-        public int GetAdministrationGrade()
+        public int GetAdministrationGrade(int index)
         {
-             return programmingGrades[2];
+             return administrationGrades[index];
         }
         
-        public void SetAdministrationGrade(int grade)
+        public void SetAdministrationGrade(int index,int grade)
         {
-            programmingGrades[2] = grade;
+            administrationGrades[index] = grade;
+        }
+        
+        public int GetDesingGrade(int index)
+        {
+            return designGrades[index];
+        }
+        
+        public void SetDesignGrade(int index,int grade)
+        {
+            designGrades[index] = grade;
         }
         
         public string Secondname
@@ -155,8 +164,8 @@ namespace Part14Task2
 
         public int[] DesingGrades
         {
-            get => desingGrades;
-            set => desingGrades = value ?? throw new ArgumentNullException(nameof(value));
+            get => designGrades;
+            set => designGrades = value ?? throw new ArgumentNullException(nameof(value));
         }
         
     }

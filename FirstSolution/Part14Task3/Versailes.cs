@@ -2,7 +2,7 @@
 
 namespace Part14Task3
 {
-    public class Versailes
+    public static class Versailes
     {
         private static double height = 40.5;
         private static string country = "France";

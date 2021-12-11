@@ -1,10 +1,10 @@
 ﻿namespace Task4UnitedKindom
 {
-    public class London
+    public static class London
     {
-        private static double thousandOfInhabitants = 8982.4;
+        private static int thousandOfInhabitants = 8982;
         
-        public static double ThousandOfInhabitants => thousandOfInhabitants;
+        public static int ThousandOfInhabitants => thousandOfInhabitants;
 
         public static void Main(string[] args)
         {
