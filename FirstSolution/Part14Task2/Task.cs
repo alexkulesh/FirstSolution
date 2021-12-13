@@ -100,32 +100,22 @@ namespace Part14Task2
             return programmingGrades[index];
         }
         
-        public void SetProgrammingGrade(int index, int grade)
-        {
-            programmingGrades[index] = grade;
-        }
-        
-        
+        public void SetProgrammingGrade(int index, int grade) =>  programmingGrades[index] = grade;
+            
         public int GetAdministrationGrade(int index)
         {
              return administrationGrades[index];
         }
         
-        public void SetAdministrationGrade(int index,int grade)
-        {
-            administrationGrades[index] = grade;
-        }
+        public void SetAdministrationGrade(int index,int grade) => administrationGrades[index] = grade;
         
-        public int GetDesingGrade(int index)
+        public int GetDesingGrade(int index) 
         {
             return designGrades[index];
         }
         
-        public void SetDesignGrade(int index,int grade)
-        {
-            designGrades[index] = grade;
-        }
-        
+        public void SetDesignGrade(int index,int grade) => designGrades[index] = grade;
+      
         public string Secondname
         {
             get => secondname;

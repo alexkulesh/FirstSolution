@@ -40,16 +40,16 @@ namespace Part14Task1
     {
         private static int numberOfWheels;
         private static int numberOfEngines;
-        
+
         private string brand;
         private string color;
         private int horsepower;
         private double length;
         private double width;
-        
+
         static Car()
-        {   
-            numberOfWheels = 4; 
+        {
+            numberOfWheels = 4;
             numberOfEngines = 1;
             Console.WriteLine($"Every average car has {numberOfEngines} engine and {numberOfWheels} wheels");
         }
@@ -80,20 +80,12 @@ namespace Part14Task1
         {
         }
 
-        public void PrintInformation()
-        {
-            Console.WriteLine($"{color} {brand} technical data: horsepower - {horsepower}, length - {length}, width - {width}");
-        }
+        public void PrintInformation() => Console.WriteLine($"{color} {brand} technical data: horsepower - " +
+                                                            $"{horsepower}, length - {length}, width - {width}");
 
-        public void RepaintCarInRed()
-        {
-            color = "Red";
-        }
+        public void RepaintCarInRed() => color = "Red";
 
-        public void AddHorsepower()
-        {
-            horsepower += 20;
-        }
+        public void AddHorsepower() => horsepower += 20;
 
         public string Brand
         {
