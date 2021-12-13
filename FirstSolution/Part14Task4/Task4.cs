@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Linq;
-using Task4Germany;
-using Task4Russia;
-using Task4UnitedKindom;
+using Part14Task4Germany;
+using Part14Task4Russia;
+using Part14Task4UnitedKingdom;
 
-namespace Task4Comparer
-{   
-    
+namespace Part14Task4
+{
     // Разработать приложение, в котором функциональность позволяет сравнить
     // население трёх столиц из разных стран. Страна обозначается пространством
     // имён, а город - классом в данном пространстве.
