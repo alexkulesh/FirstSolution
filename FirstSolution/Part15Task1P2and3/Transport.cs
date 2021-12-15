@@ -7,12 +7,8 @@ namespace Part15Task1P2
         private static string transportType;
         private string destination;
         private int number;
-        private string dateOfDepature;
+        private DateTime departureTime;
         private int numberOfSeats;
-        
-        public Transport()
-        {
-        }
 
         public string Destination
         {
@@ -26,24 +22,24 @@ namespace Part15Task1P2
             set => number = value;
         }
 
-        public string DateOfDepature
-        {
-            get => dateOfDepature;
-            set => dateOfDepature = value ?? throw new ArgumentNullException(nameof(value));
-        }
-
         public int NumberOfSeats
         {
             get => numberOfSeats;
             set => numberOfSeats = value;
         }
-        
+
         public static string TransportType
         {
             get => transportType;
             set => transportType = value ?? throw new ArgumentNullException(nameof(value));
         }
-        
+
+        public DateTime DepartureTime
+        {
+            get => departureTime;
+            set => departureTime = value;
+        }
+
         public virtual void PrintTransportType() => Console.WriteLine("Just some transport");
     }
 }

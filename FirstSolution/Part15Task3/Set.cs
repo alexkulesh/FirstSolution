@@ -24,7 +24,6 @@ namespace Part15Task3
                 for (int i = 0; i < items.Length; i++)
                 {
                     items[i].printInfo();
-                    items[i].compareDates();
                 }
             }
             else
@@ -39,12 +38,12 @@ namespace Part15Task3
             {
                 if (items[i].BestBeforeDate > DateTime.Today)
                 {
-                    Console.WriteLine("Item is not expired");
+                    Console.WriteLine($"{items[i].Name} is not expired");
                 }
                 
                 if (items[i].BestBeforeDate <= DateTime.Today)
                 {
-                    Console.WriteLine("Item is expired");
+                    Console.WriteLine($"{items[i].Name} is expired");
                     IsExpired = true;
                 }
             }

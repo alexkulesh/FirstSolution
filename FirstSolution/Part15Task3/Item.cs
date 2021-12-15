@@ -26,14 +26,26 @@ namespace Part15Task3
         {
             if (bestBeforeDate > DateTime.Today)
             {
-                Console.WriteLine("Item is not expired");
+                Console.WriteLine($"{Name} is not expired");
             }
             
             if (bestBeforeDate <= DateTime.Today)
             {
-                Console.WriteLine("Item is expired");
+                Console.WriteLine($"{Name} is expired");
                 IsExpired = true;
             }
+        }
+
+        public DateTime DateOfProduction
+        {
+            get => dateOfProduction;
+            set => dateOfProduction = value;
+        }
+
+        public DateTime BestBeforeDate
+        {
+            get => bestBeforeDate;
+            set => bestBeforeDate = value;
         }
     }
 }

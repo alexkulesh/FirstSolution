@@ -6,13 +6,7 @@ namespace Part15Task3
     {
         private string name;
         private double price;
-        private DateTime dateOfProduction;
-        private DateTime bestBeforeDate;
         private bool isExpired;
-        
-        public Product()
-        {
-        }
         
         public virtual void printInfo()
         {
@@ -20,16 +14,6 @@ namespace Part15Task3
 
         public virtual void compareDates()
         {
-            if (bestBeforeDate < DateTime.Today)
-            {
-                Console.WriteLine("Product is not expired");
-            }
-            
-            if (bestBeforeDate >= DateTime.Today)
-            {
-                Console.WriteLine("Product is expired");
-                isExpired = true;
-            }
         }
 
         public string Name
@@ -43,19 +27,7 @@ namespace Part15Task3
             get => price;
             set => price = value;
         }
-
-        public DateTime DateOfProduction
-        {
-            get => dateOfProduction;
-            set => dateOfProduction = value;
-        }
-
-        public DateTime BestBeforeDate
-        {
-            get => bestBeforeDate;
-            set => bestBeforeDate = value;
-        }
-
+        
         public bool IsExpired
         {
             get => isExpired;

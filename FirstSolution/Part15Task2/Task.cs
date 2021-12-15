@@ -18,7 +18,7 @@ namespace Part15Task2
     {
         private static void Main(string[] args)
         {
-            Auto[] autos = {new Car("Ford", "4433", 180, 500), new Motorcycle("BMW", "1111", 210, 100, false), new Truck("MAN", "5533", 120, 10500, true)};
+            Auto[] autos = {new Car("Ford", "4433", 180, 500, 4), new Motorcycle("BMW", "1111", 210, 100, false), new Truck("MAN", "5533", 120, 10500, true)};
 
             for (int i = 0; i < autos.Length; i++)
             {

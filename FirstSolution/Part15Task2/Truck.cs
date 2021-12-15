@@ -6,6 +6,13 @@ namespace Part15Task2
     {
         private bool hasTrailer;
         
+        public Truck(string brand, string registrationNum, int maxSpeed, int carryingCapacity, bool hasTrailer) 
+            : base(brand, registrationNum, maxSpeed, carryingCapacity)
+        {   
+            this.hasTrailer = hasTrailer;
+            countCarryingCapacity();
+        }
+        
         public override void printInfo()
         {
             Console.WriteLine($"{Brand} auto info:registration number - {RegistrationNum}; " +
@@ -20,13 +27,6 @@ namespace Part15Task2
             }
             
             return base.countCarryingCapacity();
-        }
-
-        public Truck(string brand, string registrationNum, int maxSpeed, int carryingCapacity, bool hasTrailer) 
-            : base(brand, registrationNum, maxSpeed, carryingCapacity)
-        {   
-            this.hasTrailer = hasTrailer;
-            countCarryingCapacity();
         }
     }
 }

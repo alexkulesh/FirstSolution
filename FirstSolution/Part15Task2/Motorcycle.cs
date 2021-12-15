@@ -5,7 +5,14 @@ namespace Part15Task2
     public class Motorcycle : Auto
     {
         private bool hasSidebar;
-
+        
+        public Motorcycle(string brand, string registrationNum, int maxSpeed, int carryingCapacity, bool hasSidebar) 
+            : base(brand, registrationNum, maxSpeed, carryingCapacity)
+        {   
+            this.hasSidebar = hasSidebar;
+            countCarryingCapacity();
+        }
+        
         public override void printInfo()
         {
             Console.WriteLine($"{Brand} auto info:registration number - {RegistrationNum}; " +
@@ -20,13 +27,6 @@ namespace Part15Task2
             }
             
             return base.countCarryingCapacity();
-        }
-
-        public Motorcycle(string brand, string registrationNum, int maxSpeed, int carryingCapacity, bool hasSidebar) 
-            : base(brand, registrationNum, maxSpeed, carryingCapacity)
-        {   
-            this.hasSidebar = hasSidebar;
-            countCarryingCapacity();
         }
     }
 }
