@@ -4,12 +4,12 @@
     {
         public static string Center()
         {
-            return "центре";
+            return "center";
         }
         
         public static string PenaltyArea()
         {
-            return "штрафной";
+            return "penalty area";
         }
     }
 }

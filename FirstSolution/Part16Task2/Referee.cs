@@ -7,12 +7,12 @@ namespace Part16Task2
         public Referee(string name) : base(name)
         {
             Name = name;
-            Console.WriteLine($"Сегодня арбитром будет {Name}");
+            Console.WriteLine($"{Name} will be referee today");
         }
 
         public void Whistle()
         {
-            Console.WriteLine($"Арбитр {Name} свистит");
+            Console.WriteLine($"Referee {Name} whistles");
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Part16Task2
     {
         public void Move(string position)
         {
-            Console.WriteLine($"мяч в {position}");
+            Console.WriteLine($"Ball is in the {position}");
         }
     }
 }

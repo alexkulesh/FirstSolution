@@ -7,27 +7,27 @@ namespace Part16Task2
         public GoalKeeper(string name) : base(name)
         {
             Name = name;
-            Console.WriteLine($"Сегодня играет вратарь {Name}");
+            Console.WriteLine($"Today goalkeeper {Name} is playing");
         }
         
         public void CatchBall()
         {
-            Console.WriteLine($"вратарь {Name} берет мяч в руки");
+            Console.WriteLine($"Goalkeeper {Name} takes ball in his hands");
         }
 
         public void MissBall()
         {
-            Console.WriteLine("ГОООЛ!");
+            Console.WriteLine("Goal!!!!");
         }
 
         public void Pass(FieldPlayer player)
         {
-            Console.WriteLine($"{Name} отдал пас {player.Name}-у");
+            Console.WriteLine($"{Name} passes ball to {player.Name}");
         }
         
         public void PickBooking()
         {
-            Console.WriteLine($"игрок {Name} получает желтую карточку");
+            Console.WriteLine($"Player {Name} gets yellow card");
         }
     }
 }

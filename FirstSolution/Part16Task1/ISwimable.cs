@@ -1,9 +1,12 @@
-﻿namespace Part16Task1
+﻿using System;
+
+namespace Part16Task1
 {
     public interface ISwimable
     {
         void Swim()
         {
+            Console.WriteLine("Someone can swim");
         }
     }
 }

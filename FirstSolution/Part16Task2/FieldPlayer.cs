@@ -8,7 +8,7 @@ namespace Part16Task2
         public FieldPlayer(string name) : base(name)
         {
             Name = name;
-            Console.WriteLine($"Сегодня играет {Name}");
+            Console.WriteLine($"Today {Name} is playing");
         }
 
         public void Move(string position)
@@ -18,18 +18,18 @@ namespace Part16Task2
 
         public void CatchBall()
         {   
-            Console.WriteLine($"игрок {Name} берет мяч в руки");
-            Console.WriteLine("...и нарушает правила");
+            Console.WriteLine($"Player {Name} takes ball in his hands");
+            Console.WriteLine("...and breaks the rules");
         }
         
         public void Pass(FieldPlayer player)
         {
-            Console.WriteLine($"{Name} отдал пас {player.Name}-у");
+            Console.WriteLine($"{Name} passes ball to {player.Name}-у");
         }
 
         public void KickOnGoal()
         {
-            Console.WriteLine($"игрок {Name} бьет по воротам");
+            Console.WriteLine($"Player {Name} hits on a goal");
         }
 
         public void PickBooking()
@@ -37,12 +37,12 @@ namespace Part16Task2
             counter++;
             if (counter == 1)
             {
-                Console.WriteLine($"игрок {Name} получает желтую карточку");
+                Console.WriteLine($"Player {Name} gets yellow card");
             }
 
             if (counter == 2)
             {
-                Console.WriteLine($"игрок {Name} получает красную карточку");
+                Console.WriteLine($"Player {Name} gets red card");
             }
         }
     }
