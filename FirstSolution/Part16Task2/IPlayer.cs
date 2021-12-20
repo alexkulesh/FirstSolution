@@ -2,19 +2,10 @@
 {
     public interface IPlayer
     {
-        public void CatchBall()
-        {
-
-        }
-
-        public void Pass(FieldPlayer player)
-        {
-
-        }
-
-        public void PickBooking()
-        {
-            
-        }
+        public void CatchBall();
+        
+        public void Pass(FieldPlayer player);
+        
+        public void PickBooking();
     }
 }
