@@ -4,7 +4,6 @@
     {
         public Triangle(double area, double perimeter) : base(area, perimeter)
         {
-           
         }
     }
 }

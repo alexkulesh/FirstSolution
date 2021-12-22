@@ -8,11 +8,9 @@ namespace Part17Task1P2
 
         public Rhombus(double floor, double angleBetweenFloorAndAdjacentSide)
         {
-            if (
-                angleBetweenFloorAndAdjacentSide > 0 &&
+            if (angleBetweenFloorAndAdjacentSide > 0 &&
                 angleBetweenFloorAndAdjacentSide < 180 &&
-                floor > 0
-                )
+                floor > 0)
             {
                 Floor = floor;
                 NumberOfSides = numberOfSides;
@@ -30,13 +28,13 @@ namespace Part17Task1P2
         public double Floor { get; set; }
 
         public double AngleBetweenFloorAndAdjacentSide { get; set; }
-        
+
         public int NumberOfSides { get; set; }
 
-        public double[] LengthOfSides { get; set; }
-        
+        public double[] LengthOfSide { get; set; }
+
         public double Area { get; set; }
-        
+
         public double Perimeter { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace Part17Task1P2
 
         public int NumberOfSides { get; set; }
 
-        public double[] LengthOfSides { get; set; }
+        public double[] LengthOfSide { get; set; }
 
         public double Area { get; set; }
 

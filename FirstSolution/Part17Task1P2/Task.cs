@@ -14,17 +14,16 @@ namespace Part17Task1P2
 
             try
             {
-                    // lengthOfTriangleSides[0] > 0 && 
-                    // lengthOfTriangleSides[0] > 0 && 
-                    // lengthOfTriangleSides[0] > 0 &&
-                    // angle1 > 0 && angle1 < 180 &&
-                    // angle2 > 0 && angle2 < 180 &&
-                    // floor1 > 0 && floor2 > 0
                   Triangle triangle = new Triangle(44, lengthOfTriangleSides);
                   Square square = new Square(floor1);
                   Rhombus rhombus = new Rhombus(floor2, angle2);
-                  CompoundFigure compoundFigure = new CompoundFigure(new ISimpleNAngle[] {triangle, square, rhombus});
-                  compoundFigure.CalculateArea(compoundFigure.SimpleNAngles);
+                  CompoundFigure compoundFigure1 = new CompoundFigure(new ISimpleNAngle[] {triangle, square, rhombus});
+                  double area1 = compoundFigure1.CalculateArea(compoundFigure1.SimpleNAngles);
+                  Console.WriteLine(area1);
+                  CompoundFigure compoundFigure2 = new CompoundFigure(new ISimpleNAngle[] {triangle, square, rhombus, triangle});
+                  double area2 = compoundFigure2.CalculateArea(compoundFigure2.SimpleNAngles);
+                  Console.WriteLine(area2);
+                  Console.WriteLine(compoundFigure1.Equals(compoundFigure2));
             }
             catch (NullReferenceException e)
             {

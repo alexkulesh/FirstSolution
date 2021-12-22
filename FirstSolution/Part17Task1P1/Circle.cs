@@ -4,7 +4,6 @@
     {
         public Circle(double area, double perimeter) : base(area, perimeter)
         {
-            
         }
     }
 }

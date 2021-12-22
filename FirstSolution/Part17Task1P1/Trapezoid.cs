@@ -4,7 +4,6 @@
     {
         public Trapezoid(double area, double perimeter) : base(area, perimeter)
         {
-           
         }
     }
 }

@@ -10,7 +10,7 @@
 
         int NumberOfSides { get; set; }
 
-        double [] LengthOfSides  { get; set; }
+        double [] LengthOfSide  { get; set; }
 
         double Area { get; set; }
 

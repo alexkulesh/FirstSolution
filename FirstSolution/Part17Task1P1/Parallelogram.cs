@@ -4,7 +4,6 @@
     {
         public Parallelogram(double area, double perimeter) : base(area, perimeter)
         {
-            
         }
     }
 }

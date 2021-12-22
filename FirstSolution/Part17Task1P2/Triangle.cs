@@ -6,25 +6,23 @@ namespace Part17Task1P2
     {
         private const int numberOfSides = 3;
 
-        public Triangle(double angleBetweenFloorAndAdjacentSide, double[] lengthOfSides)
+        public Triangle(double angleBetweenFloorAndAdjacentSide, double[] lengthOfSide)
         {
-            if (
-                angleBetweenFloorAndAdjacentSide > 0 &&
+            if (angleBetweenFloorAndAdjacentSide > 0 &&
                 angleBetweenFloorAndAdjacentSide < 180 &&
-                lengthOfSides[0] > 0 &&
-                lengthOfSides[1] > 0 &&
-                lengthOfSides[2] > 0 &&
-                lengthOfSides[0] + lengthOfSides[1] > lengthOfSides[2] &&
-                lengthOfSides[1] + lengthOfSides[2] > lengthOfSides[0] &&
-                lengthOfSides[2] + lengthOfSides[0] > lengthOfSides[1]
-                )
+                lengthOfSide[0] > 0 &&
+                lengthOfSide[1] > 0 &&
+                lengthOfSide[2] > 0 &&
+                lengthOfSide[0] + lengthOfSide[1] > lengthOfSide[2] &&
+                lengthOfSide[1] + lengthOfSide[2] > lengthOfSide[0] &&
+                lengthOfSide[2] + lengthOfSide[0] > lengthOfSide[1])
             {
-                Height = lengthOfSides[1] * Math.Sin(Math.PI * angleBetweenFloorAndAdjacentSide / 180);
-                Floor = lengthOfSides[0];
+                Height = lengthOfSide[1] * Math.Sin(Math.PI * angleBetweenFloorAndAdjacentSide / 180);
+                Floor = lengthOfSide[0];
                 NumberOfSides = numberOfSides;
-                LengthOfSides = lengthOfSides;
+                LengthOfSide = lengthOfSide;
                 Area = (Height * Floor) / 2;
-                foreach (var i in lengthOfSides)
+                foreach (var i in lengthOfSide)
                 {
                     Perimeter += i;
                 }
@@ -43,7 +41,7 @@ namespace Part17Task1P2
 
         public int NumberOfSides { get; set; }
 
-        public double[] LengthOfSides { get; set; }
+        public double[] LengthOfSide { get; set; }
 
         public double Area { get; set; }
 

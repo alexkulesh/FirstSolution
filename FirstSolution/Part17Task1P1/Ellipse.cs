@@ -4,7 +4,6 @@
     {
         public Ellipse(double area) : base(area)
         {
-            
         }
     }
 }

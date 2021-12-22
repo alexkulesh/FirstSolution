@@ -6,16 +6,16 @@ namespace Part17Task1P2
     {
         private ISimpleNAngle[] simpleNAngles;
         private double area;
-        
-        public CompoundFigure(ISimpleNAngle [] simpleNAngles)
+
+        public CompoundFigure(ISimpleNAngle[] simpleNAngles)
         {
             this.simpleNAngles = simpleNAngles;
         }
-        
-        public double CalculateArea(ISimpleNAngle [] simpleNAngles)
+
+        public double CalculateArea(ISimpleNAngle[] simpleNAngles)
         {
             area = 0;
-            
+
             for (int i = 0; i < simpleNAngles.Length; i++)
             {
                 area += simpleNAngles[i].Area;
@@ -36,19 +36,11 @@ namespace Part17Task1P2
             set => area = value;
         }
 
-        public override bool Equals(Object obj)
-        {
-            return Equals(obj as CompoundFigure);
-        }
-        
-        public bool Equals(CompoundFigure compoundFigure)
-        {
-            return Area == compoundFigure.Area;
-        }
-        
-        public override string ToString()
-        {
-            return $"Compound figure info: number of figures - {simpleNAngles.Length} ; total area - {Area}";
-        }
+        public override bool Equals(Object obj) => Equals(obj as CompoundFigure);
+
+        public bool Equals(CompoundFigure compoundFigure) => Area == compoundFigure.Area;
+
+        public override string ToString() =>
+            $"Compound figure info: number of figures - {simpleNAngles.Length} ; total area - {Area}";
     }
 }

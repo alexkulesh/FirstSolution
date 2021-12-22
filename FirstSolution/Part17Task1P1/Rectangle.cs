@@ -4,7 +4,6 @@
     {
         public Rectangle(double area, double perimeter) : base(area, perimeter)
         {
-          
         }
     }
 }
