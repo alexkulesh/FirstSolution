@@ -28,9 +28,9 @@ namespace Part18Task2
                 })
             };
             
-            foreach (var i in products)
+            foreach (var product in products)
             {
-                i.printInfo();
+                product.printInfo();
             }
         }
     }

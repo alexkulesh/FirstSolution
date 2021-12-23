@@ -35,25 +35,27 @@ namespace Part18Task1
                 })
             };
 
-            foreach (var i in products)
+            foreach (var element in products)
             {
-                i.printInfo();
+                element.printInfo();
             }
 
-            foreach (var i in products)
+            products[0].Price += 100;
+
+            var printProducts1 = products.Select(product => product);
+
+            foreach (var element in printProducts1)
             {
-                i.Price += 100;
-                i.printInfo();
+                element.printInfo();
             }
 
             products.RemoveAt(products.Count - 1);
 
-            var printProducts = from product in products
-                select new {product};
+            var printProducts2 = products.Select(product => product);
             
-            foreach (var i in printProducts)
+            foreach (var element in printProducts2)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(element);
             }
 
             Console.WriteLine("Array 1");
@@ -74,10 +76,18 @@ namespace Part18Task1
                 Console.WriteLine($"Name - {arrayOfProducts1[i].Name}; Price - {arrayOfProducts1[i].Price};");
             }
 
-            var arrayOfProducts3 = products.ToArray();
             Console.WriteLine("Array 3");
+            var arrayOfProducts3 = products.ToArray();
 
             for (int i = 0; i < arrayOfProducts3.Length; i++)
+            {
+                Console.WriteLine($"Name - {arrayOfProducts3[i].Name}; Price - {arrayOfProducts3[i].Price};");
+            }
+
+            Console.WriteLine("Array 4");
+            var arrayOfProducts4 = products.Select(product => product).ToArray();
+
+            for (int i = 0; i < arrayOfProducts4.Length; i++)
             {
                 Console.WriteLine($"Name - {arrayOfProducts3[i].Name}; Price - {arrayOfProducts3[i].Price};");
             }

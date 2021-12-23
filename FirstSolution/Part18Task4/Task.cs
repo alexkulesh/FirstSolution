@@ -15,24 +15,21 @@ namespace Part18Task4
     {
         private static void Main(string[] args)
         {
-            List<Product> products = new()
-            {
-                new Item("Milk", 5.3, new DateTime(2021, 11, 16), new DateTime(2021, 12, 16)),
-                new Item("Bread", 1.3, new DateTime(2021, 12, 1), new DateTime(2021, 12, 14)),
-                new Item("Cheese", 2.3, new DateTime(2021, 11, 21), new DateTime(2021, 12, 20)),
-                new Batch("Sugar", 1500.0, 1, new DateTime(2021, 12, 14), new DateTime(2023, 12, 14)),
-                new Batch("Wheat flour", 4020.0, 4, new DateTime(2021, 12, 14), new DateTime(2022, 06, 14)),
-                new Batch("Vitamin B12", 45000.0, 1, new DateTime(2021, 12, 14), new DateTime(2031, 12, 14))
-            };
-
+            Product product1 = new Item("Milk", 5.3, new DateTime(2021, 11, 16), new DateTime(2021, 12, 16));
+            Product product2 = new Item("Bread", 1.3, new DateTime(2021, 12, 1), new DateTime(2021, 12, 14));
+            Product product3 = new Item("Cheese", 2.3, new DateTime(2021, 11, 21), new DateTime(2021, 12, 20));
+            Product product4 = new Batch("Sugar", 1500.0, 1, new DateTime(2021, 12, 14), new DateTime(2023, 12, 14));
+            Product product5 = new Batch("Wheat flour", 4020.0, 4, new DateTime(2021, 12, 14), new DateTime(2022, 06, 14));
+            Product product6 = new Batch("Vitamin B12", 45000.0, 1, new DateTime(2021, 12, 14), new DateTime(2031, 12, 14));
+            
             Dictionary<string, double> dictionaryOfProducts = new()
             {
-                {products[0].Name, products[0].Price},
-                {products[1].Name, products[1].Price},
-                {products[2].Name, products[2].Price},
-                {products[3].Name, products[3].Price},
-                {products[4].Name, products[4].Price},
-                {products[5].Name, products[5].Price}
+                { product1.Name, product1.Price},
+                { product2.Name, product2.Price},
+                { product3.Name, product3.Price},
+                { product4.Name, product4.Price},
+                { product5.Name, product5.Price},
+                { product6.Name, product6.Price}
             };
 
             PrintInfo1(dictionaryOfProducts);
@@ -42,17 +39,17 @@ namespace Part18Task4
 
         private static void PrintInfo1(Dictionary<string, double> dictionaryOfProducts)
         {
-            foreach (var i in dictionaryOfProducts)
+            foreach (var product in dictionaryOfProducts)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(product);
             }
         }
 
         private static void PrintInfo2(Dictionary<string, double> dictionaryOfProducts)
         {
-            foreach (var i in dictionaryOfProducts)
+            foreach (var product in dictionaryOfProducts)
             {
-                Console.WriteLine($"{i.Key}");
+                Console.WriteLine($"{product.Key}");
             }
         }
 
@@ -62,9 +59,9 @@ namespace Part18Task4
                 where product.Value > 300
                 select product;
 
-            foreach (var i in selectedProducts)
+            foreach (var product in selectedProducts)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(product);
             }
         }
     }

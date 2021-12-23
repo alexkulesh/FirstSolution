@@ -42,9 +42,9 @@ namespace Part18Task5
             var newDictionary = dataList.Select((value, index) => new {value, index})
                 .ToDictionary(pair => pair.index, pair => pair.value);
 
-            foreach (var i in newDictionary)
+            foreach (var product in newDictionary)
             {
-                Console.WriteLine($"{i.Key} - {i.Value}");
+                Console.WriteLine($"{product.Key} - {product.Value}");
             }
         }
     }

@@ -35,18 +35,18 @@ namespace Part18Task0
                 {"ten", 10},
             };
 
-            foreach (var i in dictionary)
+            foreach (var pair in dictionary)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(pair);
             }
 
             string? text = Convert.ToString(Console.ReadLine());
             string?[] newText = text.Split(" ");
             var query = newText.Distinct();
 
-            foreach (var i in query)
+            foreach (var elem in query)
             {
-                Console.Write(i);
+                Console.Write(elem);
             }
         }
     }
